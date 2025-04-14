@@ -11,17 +11,16 @@
   <p>Este es un ejemplo de cómo incrustar el botón de WhatsApp.</p>
 
 <!-- Escala embed whatsapp -->
-<script id="escala-whatsapp-c1bb993e-0eb4-11f0-b4fc-8a5660fb165c-05463747941347807" data-version="0.1.0">
-    window["escala-whatsapp-c1bb993e-0eb4-11f0-b4fc-8a5660fb165c-05463747941347807"] = {
+<script id="escala-whatsapp-c1bb993e-0eb4-11f0-b4fc-8a5660fb165c-04929282717281339" data-version="0.1.0">
+    window["escala-whatsapp-c1bb993e-0eb4-11f0-b4fc-8a5660fb165c-04929282717281339"] = {
       f: "c1bb993e-0eb4-11f0-b4fc-8a5660fb165c",
-      r: "05463747941347807",
+      r: "04929282717281339",
       c: "ce8ae5e7-a5a9-11ef-8499-9ff651aeb986",
       l: "es"
     };
   
     (function () {
       function escInitWhatsappImpl(opts) {
-        console.log("[Escala WhatsApp] Inicializando con opciones:", opts);
         const id = "escala-whatsapp-" + opts.f + "-" + opts.r;
         if (document.getElementById(id + "-loaded")) return;
   
@@ -44,9 +43,9 @@
         div.setAttribute("data-auto-open-timeout", "0");
         div.setAttribute("data-closable", "true");
   
-        const rawPlaceholders = `data-contact_first_name-placeholder=&quot;Nombre&quot;
-data-contact_email-placeholder=&quot;Email&quot;
-data-contact_phone_number-placeholder=&quot;Teléfono primario&quot;`;
+        const rawPlaceholders = `data-contact_first_name-placeholder="Nombre"
+data-contact_email-placeholder="Email"
+data-contact_phone_number-placeholder="Teléfono primario"`;
         rawPlaceholders.split('\n').forEach(p => {
           const parts = p.trim().split('=');
           if (parts.length >= 2) {
@@ -79,9 +78,8 @@ data-contact_phone_number-placeholder=&quot;Teléfono primario&quot;`;
       }
   
       function escInitWhatsapp() {
-        const opts = window["escala-whatsapp-c1bb993e-0eb4-11f0-b4fc-8a5660fb165c-05463747941347807"];
+        const opts = window["escala-whatsapp-c1bb993e-0eb4-11f0-b4fc-8a5660fb165c-04929282717281339"];
         if (!opts) {
-          console.warn("[Escala WhatsApp] Opciones no definidas.");
           return;
         }
         escInitWhatsappImpl(opts);
@@ -99,7 +97,6 @@ data-contact_phone_number-placeholder=&quot;Teléfono primario&quot;`;
     })();
   </script>
   <!-- Escala embed whatsapp -->
-  
 
 </body>
 </html>
