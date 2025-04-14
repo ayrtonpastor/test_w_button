@@ -1,45 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <title>Botón WhatsApp Embed</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="ew:customerId" content="ce8ae5e7-a5a9-11ef-8499-9ff651aeb986" />
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <style>
-    body {
-      font-family: sans-serif;
-      background-color: #f7f7f7;
-      padding: 2rem;
-      text-align: center;
-    }
-    h1 {
-      margin-bottom: 1rem;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ejemplo de WhatsApp Embed</title>
 </head>
 <body>
 
-  <h1>Botón de WhatsApp incrustado</h1>
-  <p>Completa los campos del botón y pulsa enviar</p>
+  <h1>Bienvenido a mi página</h1>
+  <p>Este es un ejemplo de cómo incrustar el botón de WhatsApp.</p>
 
-  <escala-plugins-whatsapp-head
-    id="escalaWhatsappButton"
-    data-position="right"
-    data-phone="+51959604475"
-    data-title="Ayrton Factory"
-    data-message="Hola 👋, ¿en qué puedo ayudarte hoy, ah?"
-    data-contact_first_name-placeholder="Tu nombre"
-    data-contact_email-placeholder="Tu correo"
-    data-contact_phone_number-placeholder="Teléfono primario"
-    data-button="Enviar mensaje"
-    data-auto-open-timeout="0"
-    data-closable="true">
-  </escala-plugins-whatsapp-head>
+  <!-- Escala embed whatsappc1bb993e-0eb4-11f0-b4fc-8a5660fb165c -->
+  <script id="escala-whatsapp-c1bb993e-0eb4-11f0-b4fc-8a5660fb165c-022355524523396408" data-version="0.1.0">
+    window["escala-whatsapp-c1bb993e-0eb4-11f0-b4fc-8a5660fb165c-022355524523396408"] = {
+      f: "c1bb993e-0eb4-11f0-b4fc-8a5660fb165c",
+      r: "022355524523396408",
+      c: "ce8ae5e7-a5a9-11ef-8499-9ff651aeb986",
+      l: "es"
+    };
+    (function(){
+      function escInitWhatsappImpl(opts){
+        const id = "escala-whatsapp-" + opts.f + "-" + opts.r;
+        if(document.getElementById(id)) return;
 
-  <!-- Scripts del botón y puppeteer -->
-  <script src="https://landing.dev.exitoweb.com/plugins/whatsapp/whatsapp.js"></script>
-  <script src="https://landing.dev.exitoweb.com/puppeteer/fpuppeteer.js"></script>
+        const div = document.createElement("div");
+        div.id = "escalaWhatsappButton";
+        div.setAttribute("data-position", "right");
+        div.setAttribute("data-phone", "+51 959604475");
+        div.setAttribute("data-title", "Empresa1");
+        div.setAttribute("data-message", "Hola, este es su mensaje de su buen amigo el hombre araña sorprendente");
+        div.setAttribute("data-button", "Conversar");
+        div.setAttribute("data-auto-open-timeout", "0");
+        div.setAttribute("data-closable", "true");
+        div.setAttribute("data-preview-mode", "false");
+
+        // Campos personalizados
+        [
+          'data-contact_first_name-placeholder="Nombre"',
+          'data-contact_email-placeholder="Email"',
+          'data-contact_phone_number-placeholder="Teléfono primario"'
+        ].forEach(p => {
+          const [k, v] = p.trim().split('=');
+          if(k && v) div.setAttribute(k, v.replace(/['"]/g, ''));
+        });
+
+        const script1 = document.createElement("script");
+        script1.src = "https://landing.dev.exitoweb.com/plugins/whatsapp/whatsapp.js";
+        script1.type = "text/javascript";
+
+        const script2 = document.createElement("script");
+        script2.src = "https://landing.dev.exitoweb.com/puppeteer/fpuppeteer.js";
+        script2.type = "text/javascript";
+
+        const preload = document.createElement("script");
+        preload.type = "text/javascript";
+        preload.innerHTML = `window.funnelPuppeteer = window.funnelPuppeteer || {}; window.funnelPuppeteer.customerId = "${opts.c}";`;
+
+        document.body.appendChild(div);
+        document.body.appendChild(preload);
+        document.body.appendChild(script1);
+        document.body.appendChild(script2);
+      }
+
+      function escInitWhatsapp(){
+        var opts = window["escala-whatsapp-c1bb993e-0eb4-11f0-b4fc-8a5660fb165c-022355524523396408"];
+        escInitWhatsappImpl(opts);
+      }
+
+      if(window.addEventListener)
+        window.addEventListener("load", escInitWhatsapp, false);
+      else if(window.attachEvent)
+        window.attachEvent("onload", escInitWhatsapp);
+      else window.onload = escInitWhatsapp;
+    })();
+  </script>
+  <!-- Escala embed whatsappc1bb993e-0eb4-11f0-b4fc-8a5660fb165c -->
 
 </body>
 </html>
