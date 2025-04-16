@@ -11,10 +11,10 @@
   <p>Este es un ejemplo de cómo incrustar el botón de WhatsApp.</p>
 
 <!-- Escala embed whatsapp -->
-<script id="escala-whatsapp-c1bb993e-0eb4-11f0-b4fc-8a5660fb165c-07211599884572477" data-version="0.1.0">
-    window["escala-whatsapp-c1bb993e-0eb4-11f0-b4fc-8a5660fb165c-07211599884572477"] = {
+<script id="escala-whatsapp-c1bb993e-0eb4-11f0-b4fc-8a5660fb165c-06949296367209652" data-version="0.1.0">
+    window["escala-whatsapp-c1bb993e-0eb4-11f0-b4fc-8a5660fb165c-06949296367209652"] = {
       f: "c1bb993e-0eb4-11f0-b4fc-8a5660fb165c",
-      r: "07211599884572477",
+      r: "06949296367209652",
       c: "ce8ae5e7-a5a9-11ef-8499-9ff651aeb986",
       l: "es"
     };
@@ -37,7 +37,7 @@
         div.id = "escalaWhatsappButton";
         div.setAttribute("data-position", "right");
         div.setAttribute("data-phone", "+51 959604475");
-        div.setAttribute("data-title", "Empresa");
+        div.setAttribute("data-title", "Empresa de Ayrton");
         div.setAttribute("data-message", "Hola, este es su mensaje de su buen amigo el hombre araña sorprendente");
         div.setAttribute("data-button", "Conversar");
         div.setAttribute("data-auto-open-timeout", "0");
@@ -46,7 +46,14 @@
   
         const rawPlaceholders = `data-contact_first_name-placeholder="Nombre"
 data-contact_email-placeholder="Email"
-data-contact_phone_number-placeholder="Teléfono primario"`;
+data-contact_phone_number-placeholder="Teléfono primario"
+data-contact_birth_date-placeholder="Fecha de nacimiento"
+data-hora_de_nacimiento-placeholder="Hora de nacimiento"
+data-cf_contact_fecha_y_hora_de_nacimiento_pyfh_datetime-placeholder="Fecha y hora de nacimiento"
+data-cf_contact_descripcion_ovww_large_text-placeholder="Descripción"
+data-comida_favorita-placeholder="Comida favorita"
+data-cf_contact_genero_ljkp_dropdown-placeholder="Género"
+data-cf_contact_lenguajes_manejados_xxyk_multi_select-placeholder="Lenguajes manejados"`;
         rawPlaceholders.split('\n').forEach(p => {
           const parts = p.trim().split('=');
           if (parts.length >= 2) {
@@ -55,7 +62,38 @@ data-contact_phone_number-placeholder="Teléfono primario"`;
             if (key && value) div.setAttribute(key, value.replace(/['"]/g, ''));
           }
         });
-  
+
+        const rawTypes = `data-contact_first_name-type="text"
+data-contact_email-type="text"
+data-contact_phone_number-type="text"
+data-contact_birth_date-type="date"
+data-hora_de_nacimiento-type="time"
+data-cf_contact_fecha_y_hora_de_nacimiento_pyfh_datetime-type="datetime"
+data-cf_contact_descripcion_ovww_large_text-type="textarea"
+data-comida_favorita-type="radio"
+data-cf_contact_genero_ljkp_dropdown-type="select"
+data-cf_contact_lenguajes_manejados_xxyk_multi_select-type="multi_select"`;
+        rawTypes.split('\n').forEach(p => {
+          const parts = p.trim().split('=');
+          if (parts.length >= 2) {
+            const key = parts[0];
+            const value = parts.slice(1).join('=');
+            if (key && value) div.setAttribute(key, value.replace(/['"]/g, ''));
+          }
+        });
+
+        const rawOptions = `data-comida_favorita-options="Ceviche;Arroz con pollo"
+data-cf_contact_genero_ljkp_dropdown-options="Masculino;Femenino"
+data-cf_contact_lenguajes_manejados_xxyk_multi_select-options="Español;Inglés;Italiano"`;
+        rawOptions.split('\n').forEach(p => {
+          const parts = p.trim().split('=');
+          if (parts.length >= 2) {
+            const key = parts[0];
+            const value = parts.slice(1).join('=');
+            if (key && value) div.setAttribute(key, value.replace(/['"]/g, ''));
+          }
+        });
+
         const script1 = document.createElement("script");
         script1.src = "https://landing.dev.exitoweb.com/plugins/whatsapp/whatsapp.js";
         script1.type = "text/javascript";
@@ -74,7 +112,7 @@ data-contact_phone_number-placeholder="Teléfono primario"`;
       }
   
       function escInitWhatsapp() {
-        const opts = window["escala-whatsapp-c1bb993e-0eb4-11f0-b4fc-8a5660fb165c-07211599884572477"];
+        const opts = window["escala-whatsapp-c1bb993e-0eb4-11f0-b4fc-8a5660fb165c-06949296367209652"];
         if (!opts) return;
         escInitWhatsappImpl(opts);
       }
@@ -90,7 +128,7 @@ data-contact_phone_number-placeholder="Teléfono primario"`;
       }
     })();
   </script>
-  <!-- Escala embed whatsapp -->
+  <!-- Escala embed whatsapp -->  
 
 </body>
 </html>
