@@ -11,10 +11,10 @@
   <p>Este es un ejemplo de cómo incrustar el botón de WhatsApp.</p>
 
 <!-- Escala embed whatsapp -->
-<script id="escala-whatsapp-c1bb993e-0eb4-11f0-b4fc-8a5660fb165c-06949296367209652" data-version="0.1.0">
-    window["escala-whatsapp-c1bb993e-0eb4-11f0-b4fc-8a5660fb165c-06949296367209652"] = {
+<script id="escala-whatsapp-c1bb993e-0eb4-11f0-b4fc-8a5660fb165c-0990187810127307" data-version="0.1.0">
+    window["escala-whatsapp-c1bb993e-0eb4-11f0-b4fc-8a5660fb165c-0990187810127307"] = {
       f: "c1bb993e-0eb4-11f0-b4fc-8a5660fb165c",
-      r: "06949296367209652",
+      r: "0990187810127307",
       c: "ce8ae5e7-a5a9-11ef-8499-9ff651aeb986",
       l: "es"
     };
@@ -38,7 +38,7 @@
         div.setAttribute("data-position", "right");
         div.setAttribute("data-phone", "+51 959604475");
         div.setAttribute("data-title", "Empresa de Ayrton");
-        div.setAttribute("data-message", "Hola, este es su mensaje de su buen amigo el hombre araña sorprendente");
+        div.setAttribute("data-message", "Hola, este es su mensaje de su buen amigo el sorprendente hombre araña");
         div.setAttribute("data-button", "Conversar");
         div.setAttribute("data-auto-open-timeout", "0");
         div.setAttribute("data-closable", "true");
@@ -82,10 +82,26 @@ data-cf_contact_lenguajes_manejados_xxyk_multi_select-type="multi_select"`;
           }
         });
 
-        const rawOptions = `data-comida_favorita-options="Ceviche;Arroz con pollo"
-data-cf_contact_genero_ljkp_dropdown-options="Masculino;Femenino"
-data-cf_contact_lenguajes_manejados_xxyk_multi_select-options="Español;Inglés;Italiano"`;
+        const rawOptions = `data-comida_favorita-options="Ceviche§Arroz con pollo"
+data-cf_contact_genero_ljkp_dropdown-options="Masculino§Femenino"
+data-cf_contact_lenguajes_manejados_xxyk_multi_select-options="Español§Inglés§Italiano"`;
         rawOptions.split('\n').forEach(p => {
+          const parts = p.trim().split('=');
+          if (parts.length >= 2) {
+            const key = parts[0];
+            const value = parts.slice(1).join('=');
+            if (key && value) div.setAttribute(key, value.replace(/['"]/g, ''));
+          }
+        });
+
+        const rawRequired = `data-contact_email-required="true"
+data-contact_phone_number-required="true"
+data-hora_de_nacimiento-required="true"
+data-cf_contact_fecha_y_hora_de_nacimiento_pyfh_datetime-required="true"
+data-cf_contact_descripcion_ovww_large_text-required="true"
+data-cf_contact_genero_ljkp_dropdown-required="true"
+data-cf_contact_lenguajes_manejados_xxyk_multi_select-required="true"`;
+        rawRequired.split('\n').forEach(p => {
           const parts = p.trim().split('=');
           if (parts.length >= 2) {
             const key = parts[0];
@@ -112,7 +128,7 @@ data-cf_contact_lenguajes_manejados_xxyk_multi_select-options="Español;Inglés;
       }
   
       function escInitWhatsapp() {
-        const opts = window["escala-whatsapp-c1bb993e-0eb4-11f0-b4fc-8a5660fb165c-06949296367209652"];
+        const opts = window["escala-whatsapp-c1bb993e-0eb4-11f0-b4fc-8a5660fb165c-0990187810127307"];
         if (!opts) return;
         escInitWhatsappImpl(opts);
       }
@@ -128,7 +144,7 @@ data-cf_contact_lenguajes_manejados_xxyk_multi_select-options="Español;Inglés;
       }
     })();
   </script>
-  <!-- Escala embed whatsapp -->  
+  <!-- Escala embed whatsapp -->   
 
 </body>
 </html>
