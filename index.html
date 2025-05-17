@@ -11,11 +11,11 @@
   <p>Hola, contáctate con nosotros por el botón de whatsapp.</p>
 
 <!-- Escala embed whatsapp -->
-<script id="escala-whatsapp-24cc956c-2a82-11f0-8c48-7e8e07d1afdd-019738787563837146" data-version="0.1.0">
-    window["escala-whatsapp-24cc956c-2a82-11f0-8c48-7e8e07d1afdd-019738787563837146"] = {
-      f: "24cc956c-2a82-11f0-8c48-7e8e07d1afdd",
-      r: "019738787563837146",
-      c: "1e8ffe67-b731-11ef-a014-791fa881393f",
+<script id="escala-whatsapp-4321548a-3207-11f0-bb36-ae046f425475-05777171990241806" data-version="0.1.0">
+    window["escala-whatsapp-4321548a-3207-11f0-bb36-ae046f425475-05777171990241806"] = {
+      f: "4321548a-3207-11f0-bb36-ae046f425475",
+      r: "05777171990241806",
+      c: "a256e0b1-962d-11ef-82c1-e50d1d017df3",
       l: "es"
     };
   
@@ -37,18 +37,25 @@
         div.id = "escalaWhatsappButton";
         div.setAttribute("data-position", "right");
         div.setAttribute("data-phone", "+51 959604475");
-        div.setAttribute("data-title", "Ayrton Pastor");
-        div.setAttribute("data-message", "Hola déjanos tus datos aquí.");
+        div.setAttribute("data-title", "AyrtonPC");
+        div.setAttribute("data-message", "Hola, dejanos tus datos para contactarte...");
         div.setAttribute("data-button", "Conversar");
         div.setAttribute("data-auto-open-timeout", "0");
         div.setAttribute("data-closable", "true");
         div.setAttribute("data-customer-id", opts.c);
         div.setAttribute("data-form-id", opts.f);
-        div.setAttribute("data-form-name", "Formulario botón embebido 1");
+        div.setAttribute("data-form-name", "Nuevo formulario - botón whatsapp");
   
         const rawPlaceholders = `data-contact_email-placeholder="Email"
 data-contact_first_name-placeholder="Nombre"
-data-contact_last_name-placeholder="Apellido"`;
+data-contact_last_name-placeholder="Apellido"
+data-contact_phone_number-placeholder="Teléfono primario"
+data-contact_birth_date-placeholder="Fecha de nacimiento"
+data-cf_contact_tiempo_exacto_nacimiento_ktuk_datetime-placeholder="Tiempo exacto nacimiento"
+data-cf_contact_hora_de_nacimiento_dpgu_time-placeholder="Hora de nacimiento"
+data-cf_contact_comida_favorita_apvh_dropdown-placeholder="Comida favorita"
+data-sexo-placeholder="Sexo"
+data-cf_contact_idiomas_plea_multi_select-placeholder="Idiomas"`;
         rawPlaceholders.split('\n').forEach(p => {
           const parts = p.trim().split('=');
           if (parts.length >= 2) {
@@ -60,7 +67,14 @@ data-contact_last_name-placeholder="Apellido"`;
 
         const rawTypes = `data-contact_email-type="text"
 data-contact_first_name-type="text"
-data-contact_last_name-type="text"`;
+data-contact_last_name-type="text"
+data-contact_phone_number-type="text"
+data-contact_birth_date-type="date"
+data-cf_contact_tiempo_exacto_nacimiento_ktuk_datetime-type="datetime"
+data-cf_contact_hora_de_nacimiento_dpgu_time-type="time"
+data-cf_contact_comida_favorita_apvh_dropdown-type="select"
+data-sexo-type="radio"
+data-cf_contact_idiomas_plea_multi_select-type="multi_select"`;
         rawTypes.split('\n').forEach(p => {
           const parts = p.trim().split('=');
           if (parts.length >= 2) {
@@ -70,7 +84,9 @@ data-contact_last_name-type="text"`;
           }
         });
 
-        const rawOptions = ``;
+        const rawOptions = `data-cf_contact_comida_favorita_apvh_dropdown-options="Ceviche§Causa§Malarrabia"
+data-sexo-options="Masculino§Femenino"
+data-cf_contact_idiomas_plea_multi_select-options="Español§Inglés§Italiano"`;
         rawOptions.split('\n').forEach(p => {
           const parts = p.trim().split('=');
           if (parts.length >= 2) {
@@ -82,7 +98,13 @@ data-contact_last_name-type="text"`;
 
         const rawRequired = `data-contact_email-required="true"
 data-contact_first_name-required="true"
-data-contact_last_name-required="true"`;
+data-contact_last_name-required="true"
+data-contact_phone_number-required="true"
+data-contact_birth_date-required="true"
+data-cf_contact_tiempo_exacto_nacimiento_ktuk_datetime-required="true"
+data-cf_contact_hora_de_nacimiento_dpgu_time-required="true"
+data-cf_contact_comida_favorita_apvh_dropdown-required="true"
+data-cf_contact_idiomas_plea_multi_select-required="true"`;
         rawRequired.split('\n').forEach(p => {
           const parts = p.trim().split('=');
           if (parts.length >= 2) {
@@ -93,11 +115,11 @@ data-contact_last_name-required="true"`;
         });
 
         const script1 = document.createElement("script");
-        script1.src = "https://pages.staging.exitoweb.com/plugins/whatsapp/whatsapp.js";
+        script1.src = "https://escalapages.com/plugins/whatsapp/whatsapp.js";
         script1.type = "text/javascript";
   
         const script2 = document.createElement("script");
-        script2.src = "https://pages.staging.exitoweb.com/puppeteer/fpuppeteer.js";
+        script2.src = "https://escalapages.com/puppeteer/fpuppeteer.js";
         script2.type = "text/javascript";
   
         const marker = document.createElement("div");
@@ -110,7 +132,7 @@ data-contact_last_name-required="true"`;
       }
   
       function escInitWhatsapp() {
-        const opts = window["escala-whatsapp-24cc956c-2a82-11f0-8c48-7e8e07d1afdd-019738787563837146"];
+        const opts = window["escala-whatsapp-4321548a-3207-11f0-bb36-ae046f425475-05777171990241806"];
         if (!opts) return;
         escInitWhatsappImpl(opts);
       }
@@ -126,7 +148,7 @@ data-contact_last_name-required="true"`;
       }
     })();
   </script>
-  <!-- Escala embed whatsapp -->  
+  <!-- Escala embed whatsapp -->   
 
 </body>
 </html>
