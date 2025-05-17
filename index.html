@@ -11,11 +11,11 @@
   <p>Hola, contáctate con nosotros por el botón de whatsapp.</p>
 
 <!-- Escala embed whatsapp -->
-<script id="escala-whatsapp-05691b88-1e1f-11f0-a38f-3243d10a0490-07488068982986577" data-version="0.1.0">
-    window["escala-whatsapp-05691b88-1e1f-11f0-a38f-3243d10a0490-07488068982986577"] = {
-      f: "05691b88-1e1f-11f0-a38f-3243d10a0490",
-      r: "07488068982986577",
-      c: "ce8ae5e7-a5a9-11ef-8499-9ff651aeb986",
+<script id="escala-whatsapp-24cc956c-2a82-11f0-8c48-7e8e07d1afdd-05017801788646287" data-version="0.1.0">
+    window["escala-whatsapp-24cc956c-2a82-11f0-8c48-7e8e07d1afdd-05017801788646287"] = {
+      f: "24cc956c-2a82-11f0-8c48-7e8e07d1afdd",
+      r: "05017801788646287",
+      c: "1e8ffe67-b731-11ef-a014-791fa881393f",
       l: "es"
     };
   
@@ -38,24 +38,17 @@
         div.setAttribute("data-position", "right");
         div.setAttribute("data-phone", "+51 959604475");
         div.setAttribute("data-title", "Ayrton Pastor");
-        div.setAttribute("data-message", "Completa los siguientes campos para iniciar una conversación en whatsapp.1");
+        div.setAttribute("data-message", "Hola déjanos tus datos aquí.");
         div.setAttribute("data-button", "Conversar");
         div.setAttribute("data-auto-open-timeout", "0");
         div.setAttribute("data-closable", "true");
         div.setAttribute("data-customer-id", opts.c);
         div.setAttribute("data-form-id", opts.f);
-        div.setAttribute("data-form-name", "Nuevo formulario - 20 de abr. de 2025 14:38");
+        div.setAttribute("data-form-name", "Formulario botón embebido 1");
   
         const rawPlaceholders = `data-contact_email-placeholder="Email"
 data-contact_first_name-placeholder="Nombre"
-data-contact_phone_number-placeholder="Teléfono primario"
-data-contact_birth_date-placeholder="Fecha de nacimiento"
-data-cf_contact_fecha_y_hora_de_nacimiento_pyfh_datetime-placeholder="Fecha y hora de nacimiento"
-data-cf_contact_hora_de_nacimiento_jezp_time-placeholder="Hora de nacimiento"
-data-cf_contact_comida_favorita_hprr_dropdown-placeholder="Comida favorita"
-data-cf_contact_lenguajes_manejados_xxyk_multi_select-placeholder="Lenguajes manejados"
-data-cf_contact_descripcion_ovww_large_text-placeholder="Descripción"
-data-cf_contact_genero_ljkp_dropdown-placeholder="Género"`;
+data-contact_last_name-placeholder="Apellido"`;
         rawPlaceholders.split('\n').forEach(p => {
           const parts = p.trim().split('=');
           if (parts.length >= 2) {
@@ -67,14 +60,7 @@ data-cf_contact_genero_ljkp_dropdown-placeholder="Género"`;
 
         const rawTypes = `data-contact_email-type="text"
 data-contact_first_name-type="text"
-data-contact_phone_number-type="text"
-data-contact_birth_date-type="date"
-data-cf_contact_fecha_y_hora_de_nacimiento_pyfh_datetime-type="datetime"
-data-cf_contact_hora_de_nacimiento_jezp_time-type="time"
-data-cf_contact_comida_favorita_hprr_dropdown-type="radio"
-data-cf_contact_lenguajes_manejados_xxyk_multi_select-type="multi_select"
-data-cf_contact_descripcion_ovww_large_text-type="text"
-data-cf_contact_genero_ljkp_dropdown-type="select"`;
+data-contact_last_name-type="text"`;
         rawTypes.split('\n').forEach(p => {
           const parts = p.trim().split('=');
           if (parts.length >= 2) {
@@ -84,9 +70,7 @@ data-cf_contact_genero_ljkp_dropdown-type="select"`;
           }
         });
 
-        const rawOptions = `data-cf_contact_comida_favorita_hprr_dropdown-options="Ceviche§Arroz con pollo§Papa a la huancaína"
-data-cf_contact_lenguajes_manejados_xxyk_multi_select-options="Español§Inglés§Italiano"
-data-cf_contact_genero_ljkp_dropdown-options="Masculino§Femenino"`;
+        const rawOptions = ``;
         rawOptions.split('\n').forEach(p => {
           const parts = p.trim().split('=');
           if (parts.length >= 2) {
@@ -98,14 +82,7 @@ data-cf_contact_genero_ljkp_dropdown-options="Masculino§Femenino"`;
 
         const rawRequired = `data-contact_email-required="true"
 data-contact_first_name-required="true"
-data-contact_phone_number-required="true"
-data-contact_birth_date-required="true"
-data-cf_contact_fecha_y_hora_de_nacimiento_pyfh_datetime-required="true"
-data-cf_contact_hora_de_nacimiento_jezp_time-required="true"
-data-cf_contact_comida_favorita_hprr_dropdown-required="true"
-data-cf_contact_lenguajes_manejados_xxyk_multi_select-required="true"
-data-cf_contact_descripcion_ovww_large_text-required="true"
-data-cf_contact_genero_ljkp_dropdown-required="true"`;
+data-contact_last_name-required="true"`;
         rawRequired.split('\n').forEach(p => {
           const parts = p.trim().split('=');
           if (parts.length >= 2) {
@@ -116,11 +93,11 @@ data-cf_contact_genero_ljkp_dropdown-required="true"`;
         });
 
         const script1 = document.createElement("script");
-        script1.src = "https://landing.dev.exitoweb.com/plugins/whatsapp/whatsapp.js";
+        script1.src = "https://pages.staging.exitoweb.com/plugins/whatsapp/whatsapp.js";
         script1.type = "text/javascript";
   
         const script2 = document.createElement("script");
-        script2.src = "https://landing.dev.exitoweb.com/puppeteer/fpuppeteer.js";
+        script2.src = "https://pages.staging.exitoweb.com/puppeteer/fpuppeteer.js";
         script2.type = "text/javascript";
   
         const marker = document.createElement("div");
@@ -133,7 +110,7 @@ data-cf_contact_genero_ljkp_dropdown-required="true"`;
       }
   
       function escInitWhatsapp() {
-        const opts = window["escala-whatsapp-05691b88-1e1f-11f0-a38f-3243d10a0490-07488068982986577"];
+        const opts = window["escala-whatsapp-24cc956c-2a82-11f0-8c48-7e8e07d1afdd-05017801788646287"];
         if (!opts) return;
         escInitWhatsappImpl(opts);
       }
