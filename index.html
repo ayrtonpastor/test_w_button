@@ -11,11 +11,11 @@
   <p>Hola, contáctate con nosotros por el botón de whatsapp.</p>
 
 <!-- Escala embed whatsapp -->
-<script id="escala-whatsapp-4321548a-3207-11f0-bb36-ae046f425475-06236391294995157" data-version="0.1.0">
-    window["escala-whatsapp-4321548a-3207-11f0-bb36-ae046f425475-06236391294995157"] = {
-      f: "4321548a-3207-11f0-bb36-ae046f425475",
-      r: "06236391294995157",
-      c: "a256e0b1-962d-11ef-82c1-e50d1d017df3",
+<script id="escala-whatsapp-376fe0c8-31eb-11f0-a4c1-caa75899b019-05841901746933723" data-version="0.1.0">
+    window["escala-whatsapp-376fe0c8-31eb-11f0-a4c1-caa75899b019-05841901746933723"] = {
+      f: "376fe0c8-31eb-11f0-a4c1-caa75899b019",
+      r: "05841901746933723",
+      c: "ee32f26c-5adb-11ed-b213-52751222a79c",
       l: "es"
     };
   
@@ -36,26 +36,20 @@
         const div = document.createElement("div");
         div.id = "escalaWhatsappButton";
         div.setAttribute("data-position", "right");
-        div.setAttribute("data-phone", "+51 959604475");
-        div.setAttribute("data-title", "AyrtonPC");
-        div.setAttribute("data-message", "Hola, dejanos tus datos para contactarte...");
+        div.setAttribute("data-phone", "+56 951094807");
+        div.setAttribute("data-title", "Odelky Productions");
+        div.setAttribute("data-message", "Hola, puedes completar los siguientes campos para iniciar una conversación en WhatsApp.");
         div.setAttribute("data-button", "Conversar");
         div.setAttribute("data-auto-open-timeout", "0");
         div.setAttribute("data-closable", "true");
         div.setAttribute("data-customer-id", opts.c);
         div.setAttribute("data-form-id", opts.f);
-        div.setAttribute("data-form-name", "Nuevo formulario - botón whatsapp");
+        div.setAttribute("data-form-name", "Nombre, apellido, email y telef");
   
-        const rawPlaceholders = `data-contact_email-placeholder="Email"
-data-contact_first_name-placeholder="Nombre"
+        const rawPlaceholders = `data-contact_first_name-placeholder="Nombre"
 data-contact_last_name-placeholder="Apellido"
-data-contact_phone_number-placeholder="Teléfono primario"
-data-contact_birth_date-placeholder="Fecha de nacimiento"
-data-cf_contact_tiempo_exacto_nacimiento_ktuk_datetime-placeholder="Tiempo exacto nacimiento"
-data-cf_contact_hora_de_nacimiento_dpgu_time-placeholder="Hora de nacimiento"
-data-cf_contact_comida_favorita_apvh_dropdown-placeholder="Comida favorita"
-data-sexo-placeholder="Sexo"
-data-cf_contact_idiomas_plea_multi_select-placeholder="Idiomas"`;
+data-contact_email-placeholder="Email"
+data-contact_phone_number-placeholder="Teléfono primario"`;
         rawPlaceholders.split('\n').forEach(p => {
           const parts = p.trim().split('=');
           if (parts.length >= 2) {
@@ -65,16 +59,10 @@ data-cf_contact_idiomas_plea_multi_select-placeholder="Idiomas"`;
           }
         });
 
-        const rawTypes = `data-contact_email-type="text"
-data-contact_first_name-type="text"
+        const rawTypes = `data-contact_first_name-type="text"
 data-contact_last_name-type="text"
-data-contact_phone_number-type="text"
-data-contact_birth_date-type="date"
-data-cf_contact_tiempo_exacto_nacimiento_ktuk_datetime-type="datetime"
-data-cf_contact_hora_de_nacimiento_dpgu_time-type="time"
-data-cf_contact_comida_favorita_apvh_dropdown-type="select"
-data-sexo-type="radio"
-data-cf_contact_idiomas_plea_multi_select-type="multi_select"`;
+data-contact_email-type="text"
+data-contact_phone_number-type="text"`;
         rawTypes.split('\n').forEach(p => {
           const parts = p.trim().split('=');
           if (parts.length >= 2) {
@@ -84,9 +72,7 @@ data-cf_contact_idiomas_plea_multi_select-type="multi_select"`;
           }
         });
 
-        const rawOptions = `data-cf_contact_comida_favorita_apvh_dropdown-options="Ceviche§Causa§Malarrabia"
-data-sexo-options="Masculino§Femenino"
-data-cf_contact_idiomas_plea_multi_select-options="Español§Inglés§Italiano"`;
+        const rawOptions = ``;
         rawOptions.split('\n').forEach(p => {
           const parts = p.trim().split('=');
           if (parts.length >= 2) {
@@ -96,15 +82,7 @@ data-cf_contact_idiomas_plea_multi_select-options="Español§Inglés§Italiano"`
           }
         });
 
-        const rawRequired = `data-contact_email-required="true"
-data-contact_first_name-required="true"
-data-contact_last_name-required="true"
-data-contact_phone_number-required="true"
-data-contact_birth_date-required="true"
-data-cf_contact_tiempo_exacto_nacimiento_ktuk_datetime-required="true"
-data-cf_contact_hora_de_nacimiento_dpgu_time-required="true"
-data-cf_contact_comida_favorita_apvh_dropdown-required="true"
-data-cf_contact_idiomas_plea_multi_select-required="true"`;
+        const rawRequired = `data-contact_email-required="true"`;
         rawRequired.split('\n').forEach(p => {
           const parts = p.trim().split('=');
           if (parts.length >= 2) {
@@ -132,7 +110,7 @@ data-cf_contact_idiomas_plea_multi_select-required="true"`;
       }
   
       function escInitWhatsapp() {
-        const opts = window["escala-whatsapp-4321548a-3207-11f0-bb36-ae046f425475-06236391294995157"];
+        const opts = window["escala-whatsapp-376fe0c8-31eb-11f0-a4c1-caa75899b019-05841901746933723"];
         if (!opts) return;
         escInitWhatsappImpl(opts);
       }
