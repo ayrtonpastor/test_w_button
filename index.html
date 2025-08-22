@@ -11,10 +11,10 @@
   <p>Hola, contáctate con nosotros por el botón de whatsapp.</p>
 
 <!-- Escala embed whatsapp -->
-<script id="escala-whatsapp-24cc956c-2a82-11f0-8c48-7e8e07d1afdd-076047697364394" data-version="0.1.0">
-    window["escala-whatsapp-24cc956c-2a82-11f0-8c48-7e8e07d1afdd-076047697364394"] = {
+<script id="escala-whatsapp-24cc956c-2a82-11f0-8c48-7e8e07d1afdd-010726995797799599" data-version="0.1.0">
+    window["escala-whatsapp-24cc956c-2a82-11f0-8c48-7e8e07d1afdd-010726995797799599"] = {
       f: "24cc956c-2a82-11f0-8c48-7e8e07d1afdd",
-      r: "076047697364394",
+      r: "010726995797799599",
       c: "1e8ffe67-b731-11ef-a014-791fa881393f",
       l: "es"
     };
@@ -49,11 +49,7 @@
         const rawPlaceholders = `data-contact_email-placeholder="Email"
 data-contact_first_name-placeholder="Nombre"
 data-contact_last_name-placeholder="Apellido"
-data-contact_phone_number-placeholder="Teléfono primario"
-data-contact_birth_date-placeholder="Fecha de nacimiento"
-data-cf_contact_hora_de_nacimiento_rpgv_time-placeholder="Hora de nacimiento"
-data-cf_contact_fecha_completa_nacimiento_rzrb_datetime-placeholder="Fecha completa nacimiento"
-data-cf_contact_idiomas_aohr_multi_select-placeholder="Idiomas"`;
+data-contact_phone_number-placeholder="Teléfono primario"`;
         rawPlaceholders.split('\n').forEach(p => {
           const parts = p.trim().split('=');
           if (parts.length >= 2) {
@@ -66,11 +62,7 @@ data-cf_contact_idiomas_aohr_multi_select-placeholder="Idiomas"`;
         const rawTypes = `data-contact_email-type="text"
 data-contact_first_name-type="text"
 data-contact_last_name-type="text"
-data-contact_phone_number-type="text"
-data-contact_birth_date-type="date"
-data-cf_contact_hora_de_nacimiento_rpgv_time-type="time"
-data-cf_contact_fecha_completa_nacimiento_rzrb_datetime-type="datetime"
-data-cf_contact_idiomas_aohr_multi_select-type="multi_select"`;
+data-contact_phone_number-type="text"`;
         rawTypes.split('\n').forEach(p => {
           const parts = p.trim().split('=');
           if (parts.length >= 2) {
@@ -80,7 +72,7 @@ data-cf_contact_idiomas_aohr_multi_select-type="multi_select"`;
           }
         });
 
-        const rawOptions = `data-cf_contact_idiomas_aohr_multi_select-options="Inglés§Español§Latín"`;
+        const rawOptions = ``;
         rawOptions.split('\n').forEach(p => {
           const parts = p.trim().split('=');
           if (parts.length >= 2) {
@@ -93,11 +85,7 @@ data-cf_contact_idiomas_aohr_multi_select-type="multi_select"`;
         const rawRequired = `data-contact_email-required="true"
 data-contact_first_name-required="true"
 data-contact_last_name-required="true"
-data-contact_phone_number-required="true"
-data-contact_birth_date-required="true"
-data-cf_contact_hora_de_nacimiento_rpgv_time-required="true"
-data-cf_contact_fecha_completa_nacimiento_rzrb_datetime-required="true"
-data-cf_contact_idiomas_aohr_multi_select-required="true"`;
+data-contact_phone_number-required="true"`;
         rawRequired.split('\n').forEach(p => {
           const parts = p.trim().split('=');
           if (parts.length >= 2) {
@@ -125,7 +113,7 @@ data-cf_contact_idiomas_aohr_multi_select-required="true"`;
       }
   
       function escInitWhatsapp() {
-        const opts = window["escala-whatsapp-24cc956c-2a82-11f0-8c48-7e8e07d1afdd-076047697364394"];
+        const opts = window["escala-whatsapp-24cc956c-2a82-11f0-8c48-7e8e07d1afdd-010726995797799599"];
         if (!opts) return;
         escInitWhatsappImpl(opts);
       }
